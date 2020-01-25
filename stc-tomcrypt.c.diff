@@ -1,0 +1,14 @@
+@@ -1364,16 +1364,65 @@
+ rypt */%0A
++/* COMMENTED OUT FOR EMSCRIPTEN COMPILATION */%0A//
+ #ifdef L
+@@ -1447,16 +1447,18 @@
+ S_NAMES%0A
++//
+ #define 
+@@ -1497,14 +1497,63 @@
+ 1_5%0A
++//
+ #endif
++%0A/* COMMENTED OUT FOR EMSCRIPTEN COMPILATION */
+ %0A%0Ain

@@ -1,0 +1,16 @@
+@@ -19329,25 +19329,75 @@
+ id = NULL;%0A%0A
++/* COMMENTED OUT FOR EMSCRIPTEN COMPILATION */%0A
+ %09
++// 
+ if (t-%3Esdtid
+@@ -19399,16 +19399,19 @@
+ sdtid)%0A%09
++// 
+ %09return 
+@@ -19431,29 +19431,82 @@
+ (t, pass);%0A%09
++// 
+ else 
++%0A/* COMMENTED OUT FOR EMSCRIPTEN COMPILATION */%09%0A%09
+ if (t-%3Ev3)%0A%09

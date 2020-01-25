@@ -1,0 +1,31 @@
+{
+  "name": "stoken",
+  "version": "0.0.1",
+  "description": "libstoken port to js (using emscripten to compile to WASM) which allows RSA SecurID token generation.",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm run clone-dependencies && npm run build-libtomcrypt && npm run prepare-stoken && npm run patch-stoken",
+    "build-libtomcrypt": "cd ./dependencies/libtomcrypt && make clean && emmake make library",
+    "clone-dependencies": "rm -rf dependencies && npm run git-clone-libtomcrypt && npm run git-clone-libstoken",
+    "git-clone-libtomcrypt": "git clone https://github.com/libtom/libtomcrypt.git ./dependencies/libtomcrypt",
+    "git-clone-libstoken": "git clone https://github.com/cernekee/stoken.git ./dependencies/stoken",
+    "prepare-stoken": "cd ./dependencies/stoken && ./autogen.sh && emconfigure ./configure",
+    "patch-stoken": "node_modules/.bin/file-patch stc-tomcrypt.c.diff dependencies/stoken/src/stc-tomcrypt.c && node_modules/.bin/file-patch securid.c.diff dependencies/stoken/src/securid.c",
+    "make-self": "emmake make",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SecurID",
+    "token",
+    "stoken"
+  ],
+  "author": "jbremmer",
+  "license": "MIT",
+  "devDependencies": {
+    "file-patch": "^0.3.0"
+  }
+}
