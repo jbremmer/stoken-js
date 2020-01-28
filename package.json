@@ -1,5 +1,5 @@
 {
-  "name": "stoken",
+  "name": "stokenjs",
   "version": "0.0.1",
   "description": "libstoken port to js (using emscripten to compile to WASM) which allows RSA SecurID token generation.",
   "main": "index.js",
