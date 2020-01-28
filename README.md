@@ -12,6 +12,9 @@ Use:
     const stoken = require("stokenjs");
     const code   = await computeCode("252...206");
 
+Build:
+
+
 
 License:
 
