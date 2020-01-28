@@ -10,7 +10,7 @@ Install:
 Use:
 
     const stoken = require("stokenjs");
-    const code   = await  computeCode("252...206");
+    const code   = await computeCode("252...206");
 
 
 License:
