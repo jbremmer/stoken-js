@@ -14,6 +14,13 @@ Use:
 
 Build:
 
+    npm run build
+
+dependencies: 
+- git 
+- make 
+- emscripten sdk
+
 
 
 License:
